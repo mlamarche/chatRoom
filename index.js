@@ -3,15 +3,6 @@ var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 var port = process.env.PORT || 3000;
-app.get('/', function(req, res) {
-    res.sendfile('index.html');
-});
-app.get('/main.js', function(req, res) {
-    res.sendfile('main.js');
-});
-app.get('/style.css', function(req, res) {
-    res.sendfile('style.css');
-});
 server.listen(port, function() {
     console.log('Server listening at port %d', port);
 });
